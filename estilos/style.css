@@ -1,0 +1,30 @@
+@charset "UTF-8";
+
+body{ 
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr) ;
+    grid-template-rows: repeat(3, 1fr);
+}
+
+header {
+    display: flex;
+    grid-area: 1 / 1 / 1 / 4;
+    border: 1px solid black;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+
+header > h1 { 
+    margin: 20px 300px 20px 300px;
+    font-size: 3em;
+}
+
+header > a { 
+    text-decoration: none;
+    color: rgba(0, 0, 0, 0.562);
+}
