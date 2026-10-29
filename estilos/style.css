@@ -8,6 +8,7 @@ body {
 }
 
 header {
+    background-color: rgba(211, 211, 211, 0.411);
     display: flex;
     border-bottom: 1px solid rgb(211, 211, 211);
     flex-direction: row;
@@ -30,7 +31,7 @@ header > a {
 }
 
 header > a > p { 
-    transition: 0.2s;
+    transition: 0;
 }
 
 header > a > p:hover { 
@@ -61,14 +62,30 @@ main {
     
 }
 
+.esquerda > a { 
+    color: black;
+    text-decoration: none;
+    transition: 0.2s;
+}
+
+.esquerda > a:hover { 
+    text-decoration: underline;
+    text-underline-offset: 8px;
+}
+
 .direita > button { 
     background-color: white;
     border: 1px solid rgba(211, 211, 211, 0.205);
     border-radius: 12px;
     box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.568);   
-    border-radius: 8px;
     width: 80px;
-    height: 25px; 
+    height: 25px;
+    transition: 0.2s; 
+}
+
+.direita > button:hover { 
+    transform: scale(1.03);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);  
 }
 
 #produtos { 
@@ -76,8 +93,10 @@ main {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-around;
-    align-items: center; 
+    align-items: center;
+    margin-top: 10px; 
 }
+
 .roupa { 
     margin-bottom: 50px;
 }
@@ -85,9 +104,48 @@ main {
 .roupa > img { 
     border: 1px solid rgba(211, 211, 211, 0.205);
     border-radius: 12px;
-    box-shadow: 1px 3px 6px rgba(0, 0, 0, 0.568);    
+    box-shadow: 1px 3px 6px rgba(0, 0, 0, 0.568); 
 }
 
 .roupa > p { 
     line-height: 0%;
+}
+
+@media screen and (max-width: 600px) {
+    header {
+        background-color: rgba(211, 211, 211, 0.411);
+        display: flex;
+        border-bottom: 1px solid rgb(211, 211, 211);
+        flex-direction: column;
+        font-size: 0.8em;        
+    }
+
+    #escrita {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between; /* Empurra um para a esquerda e o outro para a direita */
+        align-items: center;
+        width: 100vw; /* Garante que use 100% da largura da tela do celular */
+        box-sizing: border-box;
+        padding: 0 15px; /* Evita que o texto cole na borda física do aparelho, dando um respiro visual */
+        font-size: 0.8em;
+    }
+
+    .esquerda,
+    .direita {
+        display: flex;
+        gap: 10px;
+        margin-top: 10px;    
+    }
+
+    .direita > button { 
+        font-size: 0.8em;
+        background-color: white;
+        border: 1px solid rgba(211, 211, 211, 0.205);
+        border-radius: 12px;
+        box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.568);
+        width: 55px;
+        height: 20px;
+    }
+    
 }
