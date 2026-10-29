@@ -10,34 +10,38 @@
 </head>
 <body>
     <header>
-        <a href="#">
-            <p><i class="fa-solid fa-bars"></i></p>
-        </a>
-        <a href="#">
-            <p>Inicio</p>
-        </a>
-        <a href="#">
-            <p>Jornal</p>
-        </a>
-        <a href="#">
-            <p>Sobre</p>
-        </a>
+        <a href="#" id="btn-menu">
+            <p><i class="fa-solid fa-bars"></i></p> </a>
+
+        <a href="#"> <p>Inicio</p></a>
+
+        <a href="#"><p>Jornal</p></a>
+
+        <a href="#"><p>Sobre</p></a>
 
         <h1>EROS</h1>
 
-        <a href="#">
-            <p>Conta</p>
-        </a>
-        <a href="#">
-            <p>Blog</p>
-        </a>
-        <a href="#">
-            <p>Carrinho</p>
-        </a>
-        <a href="#">
-            <p><i class="fa-solid fa-magnifying-glass"></i></p>
-        </a>
+        <a href="#"><p>Conta</p></a>
+
+        <a href="#"><p>Blog</p></a>
+
+        <a href="#"><p>Carrinho</p></a>
+
+        <a href="#"><p><i class="fa-solid fa-magnifying-glass"></i></p></a>
     </header>
+
+    <nav id="menu-lateral">
+    <button id="fechar-menu" aria-label="Fechar menu">
+        <i class="fa-solid fa-xmark"></i>
+    </button>
+
+    <a href="#">Início</a>
+    <a href="#">Jornal</a>
+    <a href="#">Sobre</a>
+    <a href="#">Conta</a>
+    <a href="#">Blog</a>
+    <a href="#">Carrinho</a>
+</nav>
 
     <main>
         <div id="escrita">
@@ -61,43 +65,46 @@ Filtro</button>
         </div>
 
         <div id="produtos">
-            <div class="roupa">
-                <img src="imagens/azul.png" alt="">
+            <div class="roupa" id="azul">
+                <img src="imagens/azul.png" alt="Boxy Azul">
                 <h3>Camisa Boxy Eros - Logo Azul</h3>
                 <p>R$ 100,00</p>
             </div>
 
 
-            <div class="roupa">
-                <img src="imagens/preta.png" alt="">
+            <div class="roupa" id="preta">
+                <img src="imagens/preta.png" alt="Boxy Preta">
                 <h3>Camisa Boxy Eros Preta - Logo Branca</h3>
                 <p>R$ 100,00</p>
             </div>
 
-            <div class="roupa">
-                <img src="imagens/vermelha.png" alt="">
+            <div class="roupa" id="boxyvermelha">
+                <img src="imagens/vermelha.png" alt="Boxy Vermelho">
                 <h3>Camisa Boxy Eros - Logo Vermelho</h3>
                 <p>R$ 100,00</p>
             </div>
 
-            <div class="roupa">
-                <img src="imagens/regatabranca.png" alt="">
+            <div class="roupa" id="regatabranca">
+                <img src="imagens/regatabranca.png" alt="Regata Branca">
                 <h3>Camisa Regata Eros Branca - Logo Preta</h3>
                 <p>R$ 80,00</p>
             </div>
 
-            <div class="roupa">
-                <img src="imagens/bone.jpg" alt="">
+            <div class="roupa" id="bone">
+                <img src="imagens/bone.jpg" alt="Boné Preto">
                 <h3>Boné Eros Preto</h3>
                 <p>R$ 120,00</p>
             </div>
 
-            <div class="roupa">
-                <img src="imagens/regatapreta.png" alt="">
+            <div class="roupa" id="regatapreta">
+                <img src="imagens/regatapreta.png" alt="Regata">
                 <h3>Camisa Regata Eros Preta - Logo Branca</h3>
                 <p>R$ 80,00</p>
             </div>
         </div>
     </main>
+    
+    <script src="script.js"></script>
+
 </body>
 </html>

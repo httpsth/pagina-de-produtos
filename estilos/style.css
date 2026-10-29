@@ -38,6 +38,66 @@ header > a > p:hover {
     color: black;
 }
 
+/* Botão hambúrguer */
+#btn-menu {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 1.5em;
+    cursor: pointer;
+}
+
+/* Fundo escuro */
+#fundo-menu {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 20;
+}
+
+/* Menu lateral */
+#menu-lateral {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 260px;
+    height: 100vh;
+    background-color: white;
+    z-index: 30;
+    display: flex;
+    flex-direction: column;
+    padding: 25px;
+    box-sizing: border-box;
+    gap: 25px;
+
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+}
+
+#menu-lateral a {
+    text-decoration: none;
+    color: black;
+    font-size: 1.1em;
+}
+
+/* Botão fechar */
+#fechar-menu {
+    align-self: flex-end;
+    background: none;
+    border: none;
+    font-size: 1.5em;
+    cursor: pointer;
+}
+
+/* Estados ativos */
+#menu-lateral.aberto {
+    transform: translateX(0);
+}
+
+#fundo-menu.ativo {
+    display: block;
+}
 
 main {
     width: 100%;
@@ -111,13 +171,28 @@ main {
     line-height: 0%;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 600px) {      
+    
     header {
-        background-color: rgba(211, 211, 211, 0.411);
-        display: flex;
-        border-bottom: 1px solid rgb(211, 211, 211);
-        flex-direction: column;
-        font-size: 0.8em;        
+            flex-direction: row;
+            justify-content: space-between;
+            padding: 0 20px;
+    }
+
+    header > a {
+            display: none;
+    }
+
+    #btn-menu {
+            display: block;
+    }
+
+    header > h1 {
+            margin: 15px 0;
+            font-size: 2em;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
     }
 
     #escrita {
@@ -127,7 +202,7 @@ main {
         align-items: center;
         width: 100vw; /* Garante que use 100% da largura da tela do celular */
         box-sizing: border-box;
-        padding: 0 15px; /* Evita que o texto cole na borda física do aparelho, dando um respiro visual */
+        padding: 0 30px; /* Evita que o texto cole na borda física do aparelho, dando um respiro visual */
         font-size: 0.8em;
     }
 
@@ -148,4 +223,31 @@ main {
         height: 20px;
     }
     
+    #azul img {
+        content: url('../imagens/azul_pequena.png');
+    }
+
+    #preta img {
+        content: url('../imagens/preta_pequena.png');
+    }
+
+    #boxyvermelha img {
+        content: url('../imagens/vermelha_pequena.png');
+    }
+
+    #regatabranca img {
+        content: url('../imagens/regatabranca_pequena.png');
+    }
+
+    #bone img {
+        content: url('../imagens/bone_pequeno.jpg');
+    }
+
+    #regatapreta img {
+        content: url('../imagens/regatapreta_pequena.png');
+    }
+
+    .roupa > h3, p { 
+        font-size: 1em;
+    }
 }
